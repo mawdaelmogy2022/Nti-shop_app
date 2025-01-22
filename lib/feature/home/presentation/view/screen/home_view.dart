@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shop_app/core/cubit/product_cubit/product_cubit.dart';
-import 'package:shop_app/feature/category/presentation/view/screen/category_view.dart';
-import 'package:shop_app/feature/home/model/category_model.dart';
+import 'package:shop_app/feature/home/data/cubit/product_cubit/product_cubit.dart';
+import 'package:shop_app/feature/home/data/model/category_model.dart';
+import 'package:shop_app/feature/home/presentation/view/screen/category_view.dart';
 import 'package:shop_app/feature/home/presentation/view/widget/custom_container_category.dart';
 import 'package:shop_app/feature/home/presentation/view/widget/custom_text_drawer.dart';
 
@@ -15,7 +15,7 @@ class HomeView extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
-          'Shop App ',
+          'Categories  ',
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700),
         ),
       ),
@@ -38,7 +38,7 @@ class HomeView extends StatelessWidget {
                                     MaterialPageRoute(builder: (context) {
                                   return CategoryView(
                                     category: listCategory[index].categoryName,
-                                    color: listCategory[index].backgroundColor,
+                                  //  color: listCategory[index].backgroundColor,
                                   );
                                 }));
                               }),
@@ -53,8 +53,8 @@ class HomeView extends StatelessWidget {
           child: Column(
             children: [
            
-              const SizedBox(height: 10),
-              const Row(
+              const SizedBox(height: 50),
+             /* const Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
@@ -65,7 +65,7 @@ class HomeView extends StatelessWidget {
                         fontWeight: FontWeight.bold),
                   ),
                 ],
-              ),
+              ),*/
               const SizedBox(height: 10),
               Expanded(
                 child: ListView.builder(
@@ -84,7 +84,7 @@ class HomeView extends StatelessWidget {
                                   MaterialPageRoute(builder: (context) {
                                 return CategoryView(
                                   category: listCategory[index].categoryName,
-                                  color: listCategory[index].backgroundColor,
+                               
                                 );
                               }));
                             }),

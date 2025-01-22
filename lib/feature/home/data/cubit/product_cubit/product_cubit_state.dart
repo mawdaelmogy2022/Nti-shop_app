@@ -1,5 +1,5 @@
 
-import 'package:shop_app/core/model/product_model.dart';
+import 'package:shop_app/feature/home/data/model/product_model.dart';
 
 class ProductCubitState {}
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/feature/home/model/category_model.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shop_app/feature/home/data/model/category_model.dart';
 
 class CustomContainerCategory extends StatelessWidget {
   const CustomContainerCategory(
@@ -13,18 +14,25 @@ class CustomContainerCategory extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
-            color: categoryModel.backgroundColor),
+                color:const Color.fromARGB(255, 175, 27, 175)),
         width: double.infinity,
-        height: 150,
+        height: 70,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8),
+          padding:const EdgeInsets.symmetric(horizontal: 8),
           child: Center(
-            child: Text(
-              categoryModel.categoryName,
-              style: const TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 22),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  categoryModel.categoryName,
+                  style: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18), 
+                         
+                ),
+                    Icon(categoryModel.icon,color: Colors.white,size: 24,)
+              ],
             ),
           ),
         ),

@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:shop_app/core/model/product_model.dart';
+import 'package:shop_app/feature/home/data/model/product_model.dart';
 
 class ProductService {
   Future<List<ProductModel>> getproductData({required String category}) async {

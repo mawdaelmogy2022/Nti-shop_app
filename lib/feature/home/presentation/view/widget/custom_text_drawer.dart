@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/feature/home/model/category_model.dart';
+import 'package:shop_app/feature/home/data/model/category_model.dart';
 
 class CustomTextDrawer extends StatelessWidget {
   const CustomTextDrawer(

@@ -1,7 +1,7 @@
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shop_app/core/cubit/product_cubit/product_cubit_state.dart';
-import 'package:shop_app/core/service/product_service.dart';
+import 'package:shop_app/feature/home/data/cubit/product_cubit/product_cubit_state.dart';
+import 'package:shop_app/feature/home/data/service/product_service.dart';
 
 class ProductCubit extends Cubit<ProductCubitState> {
   ProductCubit() : super(Intialstatue());

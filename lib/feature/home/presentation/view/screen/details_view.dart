@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/core/model/product_model.dart';
+import 'package:shop_app/feature/home/data/model/product_model.dart';
+import 'package:shop_app/feature/home/presentation/view/widget/custom_appbar.dart';
 
-class CustomCard extends StatelessWidget {
-  const CustomCard({super.key, required this.productModel,required this.color});
+class DetailsView extends StatelessWidget {
+  const DetailsView({super.key, required this.productModel});
   final ProductModel productModel;
-  final Color color;
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return Scaffold(
+      appBar: customAppbar(titleCategory: 'Details page'),
+      body:  Card(
       child: Column(
         children: [
           SizedBox(
@@ -21,7 +23,7 @@ class CustomCard extends StatelessWidget {
               children: [
                 Text(
                   productModel.title,
-                  maxLines: 2,
+                  maxLines: 4,
                   style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
@@ -36,7 +38,7 @@ class CustomCard extends StatelessWidget {
                         Text(
                           'Price : ${productModel.price} USD',
                           style: const TextStyle(
-                              color: Colors.red, fontWeight: FontWeight.bold),
+                              color: Colors.purple, fontWeight: FontWeight.bold),
                         ),
                         Row(
                           children: [
@@ -63,8 +65,9 @@ class CustomCard extends StatelessWidget {
                     const Spacer(),
                     Container(
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          color: color),
+                        borderRadius: BorderRadius.circular(8),
+                        color: Colors.purple
+                      ),
                       width: 140,
                       height: 40,
                       child: Center(
@@ -79,8 +82,6 @@ class CustomCard extends StatelessWidget {
                 const SizedBox(height: 8),
                 Text(
                   productModel.description,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(color: Colors.grey),
                 ),
               ],
@@ -88,6 +89,7 @@ class CustomCard extends StatelessWidget {
           ),
         ],
       ),
+    ) ,
     );
   }
 }
